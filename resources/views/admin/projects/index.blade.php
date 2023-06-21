@@ -26,7 +26,7 @@
                     </th>
                     <th scope="col">Name</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Type</th>
+                    <th scope="col" class="text-center">Type</th>
                     <th scope="col">Status</th>
                     <th scope="col">Actions</th>
                 </tr>
@@ -37,7 +37,7 @@
                         <td class="text-center">{{ $project->id }}</td>
                         <td>{{ $project->name }}</td>
                         <td class="text-capitalize">{{ $project->category }}</td>
-                        <td class="text-capitalize">{{ $project->type?->name ?? 'undefined' }}</td>
+                        <td class="text-center"><span class="badge text-bg-info p-2 text-uppercase fs-7">{{ $project->type?->name ?? 'undefined' }}</span></td>
                         <td>{{ $project->is_closed ? 'Closed' : 'Ongoing' }}</td>
                         <td>
                             <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-primary"><i
