@@ -108,6 +108,19 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="type_id" class="form-label">Status</label>
+                    <select class="form-select w-25" name="type_id" id="type_id">
+                        <option value="" selected>Select a Type</option>
+                        @foreach ($project_type as $type)
+                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+                        @endforeach
+                    </select>
+                        @error('type_id')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                </div>
+
+                <div class="mb-3">
                     <label for="is_closed" class="form-label">Status</label>
                     <select class="form-select w-25" name="is_closed" id="is_closed">
                         <option value="0" selected>Ongoing</option>

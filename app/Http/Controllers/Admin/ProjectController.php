@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProjectRequest;
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
@@ -36,7 +37,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $project_type = Type::all();
+        return view('admin.projects.create', compact('project_type'));
     }
 
     /**
@@ -86,7 +88,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+        $project_type = Type::all();
+        return view('admin.projects.edit', compact('project', 'project_type'));
     }
 
     /**
