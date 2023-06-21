@@ -108,11 +108,11 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="type_id" class="form-label">Status</label>
+                    <label for="type_id" class="form-label">Project Type</label>
                     <select class="form-select w-25" name="type_id" id="type_id">
                         <option value="" selected>Select a Type</option>
                         @foreach ($project_type as $type)
-                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+                            <option value="{{ $type->id }}" @if($type->id == old('type_id', $project?->type->id)) selected @endif>{{$type->name}}</option>
                         @endforeach
                     </select>
                         @error('type_id')
