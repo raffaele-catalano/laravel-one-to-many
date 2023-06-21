@@ -22,8 +22,8 @@
         <p>{!! $project->description !!}</p>
     </div>
     <div class="container d-flex justify-content-center">
-        <a href="{{ route('admin.projects.index') }}" class="btn btn-primary mx-2">
-            <i class="fa-solid fa-rotate-left fa-lg"></i>
+        <a href="{{ route('admin.projects.index') }}" class="btn btn-primary mx-2 py-2">
+            <i class="fa-solid fa-rotate-left fa-2xl"></i>
         </a>
     </div>
 

@@ -2,7 +2,7 @@
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
             <div class="logo">
-                <img src="/logo-small.png" alt="logo-small">
+                <img src="/logo.png" alt="logo" class="w-75">
             </div>
             {{-- config('app.name', 'Laravel') --}}
         </a>
