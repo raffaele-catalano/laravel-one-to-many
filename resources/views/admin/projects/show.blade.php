@@ -23,7 +23,7 @@
     </div>
     <div class="container d-flex justify-content-center">
         <a href="{{ route('admin.projects.index') }}" class="btn btn-primary mx-2">
-            Back to Projects
+            <i class="fa-solid fa-rotate-left fa-lg"></i>
         </a>
     </div>
 

@@ -118,7 +118,7 @@
 
                 <div class="mb-3">
                     <label for="type_id" class="form-label">Status</label>
-                    <select class="form-select w-25" name="type_id" id="type_id">
+                    <select class="form-select w-25 @error('type_id') is-invalid @enderror" name="type_id" id="type_id">
                         <option value="" selected>Select a Type</option>
                         @foreach ($project_type as $type)
                             <option value="{{ $type->id }}">{{ $type->name }}</option>
@@ -131,7 +131,7 @@
 
                 <div class="mb-3">
                     <label for="is_closed" class="form-label">Status</label>
-                    <select class="form-select w-25" name="is_closed" id="is_closed">
+                    <select class="form-select w-25 @error('is_closed') is-invalid @enderror" name="is_closed" id="is_closed">
                         <option value="" selected>Select a Status</option>
                         <option value="0">Ongoing</option>
                         <option value="1">Closed</option>
