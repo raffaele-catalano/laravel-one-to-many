@@ -10,7 +10,7 @@
             </div>
         @endif
 
-        <table class="table table-striped table-hover w-75">
+        <table class="table table-striped table-hover w-100">
             <thead>
                 <tr>
                     <th scope="col" class="text-center">
@@ -26,6 +26,7 @@
                     </th>
                     <th scope="col">Name</th>
                     <th scope="col">Category</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Status</th>
                     <th scope="col">Actions</th>
                 </tr>
@@ -36,6 +37,7 @@
                         <td class="text-center">{{ $project->id }}</td>
                         <td>{{ $project->name }}</td>
                         <td class="text-capitalize">{{ $project->category }}</td>
+                        <td class="text-capitalize">{{ $project->type?->name ?? 'undefined' }}</td>
                         <td>{{ $project->is_closed ? 'Closed' : 'Ongoing' }}</td>
                         <td>
                             <a href="{{ route('admin.projects.show', $project) }}" class="btn btn-primary"><i
