@@ -38,4 +38,8 @@ class Project extends Model
         'is_closed',
         'slug'
     ];
+
+    public function type() {
+        return $this->belongsTo(Type::class);
+    }
 }
