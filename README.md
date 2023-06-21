@@ -15,3 +15,10 @@ I task da svolgere sono diversi:
 creare il `seeder` per il model Type e il seeder della tabella ‘projects’ con l’id del type (random) in relazione
 ### Bonus #2:
 aggiungere le operazioni `CRUD` per il model Type, in modo da gestire le tipologie di progetto direttamente dal pannello di amministrazione.
+
+## Reminder:
+```
+Delete Storage folder in Public and launch
+
+php artisan storage:link
+```
