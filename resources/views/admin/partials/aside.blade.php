@@ -18,5 +18,12 @@
                 Add a New Project
             </a>
         </li>
+        <hr class="text-secondary">
+        <li class="ms-2">
+            <a href="{{ route('admin.types.index') }}" class="{{ Route::currentRouteName() === 'admin.types' ? 'active' : '' }}">
+                <i class="fa-solid fa-font-awesome fa-lg me-2"></i>
+                Project Types
+            </a>
+        </li>
     </ul>
 </aside>
